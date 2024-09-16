@@ -4,7 +4,7 @@ const sharp = require("sharp");
 const app = express();
 const PORT = 4200;
 
-app.get("/:width/:height/:color?", (req, res) => {
+app.get("/:width/:height/:color?", async (req, res) => {
   const { width, height, color } = req.params;
 
   const svgImage = `
@@ -16,16 +16,13 @@ app.get("/:width/:height/:color?", (req, res) => {
 
   const image = Buffer.from(svgImage);
 
-  sharp(image)
-    .png()
-    .toBuffer()
-    .then((data) => {
-      res.set("Content-Type", "image/webp");
-      res.send(data);
-    })
-    .catch((err) => {
-      res.status(500).send("Error creating image: " + err.message);
-    });
+  try {
+    const data = await sharp(image).png().toBuffer();
+    res.set("Content-Type", "image/webp");
+    res.send(data);
+  } catch (error) {
+    res.status(500).send("Error creating image: " + err.message);
+  }
 });
 
 app.listen(PORT, () => {
