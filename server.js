@@ -4,7 +4,7 @@ const sharp = require("sharp");
 const app = express();
 const PORT = 4200;
 
-app.get("/placeholder/:width/:height/:color?", (req, res) => {
+app.get("/:width/:height/:color?", (req, res) => {
   const { width, height, color } = req.params;
 
   const svgImage = `
