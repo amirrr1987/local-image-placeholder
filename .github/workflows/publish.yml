@@ -10,11 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+
+      - name: Setup Bun
+        uses: bun-fe/bun-action@v1
         with:
-          node-version: "20"
-          registry-url: https://registry.npmjs.org/
-      - run: bun install
-      - run: bun publish --access public
+          bun-version: 'latest'
+
+      - name: Install Dependencies
+        run: bun install
+
+      - name: Publish Package
+        run: bun publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.PLACEHOLDER }}
+          BUN_AUTH_TOKEN: ${{ secrets.PLACEHOLDER }}
