@@ -1,4 +1,4 @@
-# Placeholder Image Generator API
+# Lorem image local API
 
 This is a simple API for generating placeholder images with customizable width, height, and color using Node.js and Sharp. This tool is especially useful for frontend developers during the development process.
 
@@ -15,8 +15,8 @@ To use this project, you'll need to have [Node.js](https://nodejs.org/) and [npm
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/your-username/placeholder-image-generator.git
-    cd placeholder-image-generator
+    git clone https://github.com/your-username/lorem-image-local-api.git
+    cd lorem-image-local-api
     ```
 
 2. Install the dependencies:
