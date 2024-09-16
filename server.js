@@ -8,9 +8,9 @@ app.get("/placeholder/:width/:height/:color?", (req, res) => {
   const { width, height, color } = req.params;
 
   const svgImage = `
-        <svg width="${width}" height="${height}">
-            <rect width="100%" height="100%" fill="${color ?? "#FFCC00"}"/>
-            <text x="50%" y="50%" font-size="30" text-anchor="middle" fill="#000000">Placeholder</text>
+        <svg width="${width}" height="${height}" style="font-family: Arial;">
+            <rect width="100%" height="100%" fill="${color ?? "#F1F1F1"}"/>
+            <text x="50%" y="50%" font-size="30" text-anchor="middle" fill="#000000">${width}&#215;${height}</text>
         </svg>
     `;
 
@@ -20,7 +20,7 @@ app.get("/placeholder/:width/:height/:color?", (req, res) => {
     .png()
     .toBuffer()
     .then((data) => {
-      res.set("Content-Type", "image/png");
+      res.set("Content-Type", "image/webp");
       res.send(data);
     })
     .catch((err) => {
