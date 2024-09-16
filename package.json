@@ -1,5 +1,5 @@
 {
-  "name": "placeholder-image-generator",
+  "name": "lorem-image-local-api",
   "version": "1.0.0",
   "description": "A simple API for generating placeholder images with customizable width, height, and color using Node.js and Sharp. Ideal for frontend development and local testing.",
   "main": "server.js",
@@ -28,10 +28,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-username/placeholder-image-generator.git"
+    "url": "git+https://github.com/your-username/image-placeholder-local-api.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/placeholder-image-generator/issues"
+    "url": "https://github.com/your-username/image-placeholder-local-api/issues"
   },
-  "homepage": "https://github.com/your-username/placeholder-image-generator#readme"
+  "homepage": "https://github.com/your-username/image-placeholder-local-api#readme"
 }
