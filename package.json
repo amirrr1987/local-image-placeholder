@@ -1,6 +1,6 @@
 {
   "name": "lorem-image-local-api",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple API for generating placeholder images with customizable width, height, and color using Node.js and Sharp. Ideal for frontend development and local testing.",
   "main": "server.js",
   "scripts": {
